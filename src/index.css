@@ -4,8 +4,7 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  outline: solid rebeccapurple 3px;
+  -moz-osx-font-smoothing: grayscale;  
 }
 
 code {
@@ -13,41 +12,3 @@ code {
     monospace;
 }
 
-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-h1 {
-  background-color: rgba(161, 55, 55, .9);
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  width: 60vw;
-  background-color: rgb(46, 102, 139);
-}
-label {
-  font-size: 25px;
-  margin: 10px;
-  font-weight: bold;
-  
-}
-input[type=text], select {
-  padding: 5px;  
-  margin: 5px 30px;
-  font-size: 20px;
-}
-
-input[type=submit] {
-  background-color: seagreen;
-  margin-top: 20px;
-  padding: 5px 0;
-  height: 6vh;
-  color: #f2f5f5;
-  font-size: medium;
-  font-size: 20px;
-}

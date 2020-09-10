@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const Calculator = props => {
     return (
       
@@ -13,10 +14,10 @@ const Calculator = props => {
                 
                 <label htmlFor="selectBox"> Operation:</label>
                 <select id="selectBox" name="selectBox" htmlFor="selectBox">
-                        <option value="addition">+</option>
-                        <option value="substraction">-</option>
-                        <option value="multiplication">*</option>
-                        <option value="division">/</option>
+                        <option value="addition">+ (Add)</option>
+                        <option value="substraction">- (Sub)</option>
+                        <option value="multiplication">* (Mul)</option>
+                        <option value="division">/ (Div)</option>
                 </select>
 
                 <label htmlFor="secondInput">Input 2:</label>
