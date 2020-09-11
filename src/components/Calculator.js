@@ -10,7 +10,7 @@ const Calculator = props => {
             </h1> 
             <form>
                 <label htmlFor="firstInput">Input 1:</label>
-                <input type="text" id="firstInput" name="firstInput"></input>
+                <input type="text" id="firstInput" name="firstInput" />
                 
                 <label htmlFor="selectBox"> Operation:</label>
                 <select id="selectBox" name="selectBox" htmlFor="selectBox">
@@ -21,9 +21,9 @@ const Calculator = props => {
                 </select>
 
                 <label htmlFor="secondInput">Input 2:</label>
-                <input type="text" id="secondInput" name="secondInput"></input>
+                <input type="text" id="secondInput" name="secondInput" />
 
-                <input type='submit' value="Calculate!"></input>
+                <input type='submit' value="Calculate!" />
             </form>
         </div>
       
