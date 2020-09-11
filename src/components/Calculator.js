@@ -1,7 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 
 const Calculator = props => {
+    
+    
+    const [newFirstInput, setNewFirstInput] = useState( '' );
+    const [newSecondInput, setNewSecondInput] = useState( '' );
+
+    const result = parseFloat(newFirstInput) + parseFloat(newSecondInput);
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     return (
       
         <div>
@@ -10,7 +33,10 @@ const Calculator = props => {
             </h1> 
             <form>
                 <label htmlFor="firstInput">Input 1:</label>
-                <input type="text" id="firstInput" name="firstInput" />
+                <input type="text" 
+                       id="firstInput"
+                       onChange={e => { setNewFirstInput( e.target.value ) }}
+                       value={newFirstInput} />
                 
                 <label htmlFor="selectBox"> Operation:</label>
                 <select id="selectBox" name="selectBox" htmlFor="selectBox">
@@ -21,13 +47,17 @@ const Calculator = props => {
                 </select>
 
                 <label htmlFor="secondInput">Input 2:</label>
-                <input type="text" id="secondInput" name="secondInput" />
+                <input type="text" 
+                       id="secondInput"
+                       onChange={e => { setNewSecondInput( e.target.value ) }}
+                       value={newSecondInput} />
 
                 <input type='submit' value="Calculate!" />
             </form>
+            <p>Result : {result}</p>
         </div>
       
     );
-  }
+}
   
-  export default Calculator 
+export default Calculator 
