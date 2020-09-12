@@ -3,47 +3,43 @@ import React, { useState } from 'react';
 
 const Calculator = props => {
     
-    let result;
-    const [newFirstInput, setNewFirstInput] = useState( '' );
-    const [newSecondInput, setNewSecondInput] = useState( '' );
+    
+    const [firstInput, setFirstInput] = useState( '' );
+    const [secondInput, setSecondInput] = useState( '' );
     const [newOption, setNewOption] = useState( 'addition' );
-    const firstInputNumber = parseFloat(newFirstInput);
-    const secondInputNumber = parseFloat(newSecondInput);
-   
+    const [result, setResult]= useState( '' );
+    const firstInputNumber = parseFloat(firstInput);
+    const secondInputNumber = parseFloat(secondInput);
+    
+    
+
+    // submit event function
     const displayCalculate  = event => {
-        event.preventDefault();
-        console.log('clicked');
-        
+        event.preventDefault();       
+        selectOpearator();                
+    } 
+    // select operator
+    const selectOpearator = () => 
+    {
         if (newOption ==='addition')
         {
-            console.log('add selected');
-            result =  firstInputNumber + secondInputNumber;
-            console.log(result);
+            setResult(firstInputNumber + secondInputNumber);            
         }
         else if (newOption === 'substraction')
         {
-            console.log('substraction selected');
-            result =  firstInputNumber - secondInputNumber;
-            console.log(result);
+            setResult(firstInputNumber - secondInputNumber);            
         }
         else if (newOption === 'multiplication')
         {
-            console.log('multiplication selected');
-            result =  firstInputNumber * secondInputNumber;
-            console.log(result);
+            setResult(firstInputNumber * secondInputNumber);            
         }
         else 
         {
-            console.log('division selected');
-            result =  firstInputNumber / secondInputNumber;
-            console.log(result);
+            setResult(firstInputNumber / secondInputNumber);            
         }
-                
-    }  
+    } 
     
-    
-       
-    
+    //Retrun(JSX) 
     return (
       
         <div>
@@ -54,8 +50,8 @@ const Calculator = props => {
                 <label htmlFor="firstInput">Input 1:</label>
                 <input type="text" 
                        id="firstInput"
-                       onChange={e => { setNewFirstInput( e.target.value ) }}
-                       value={newFirstInput} />
+                       onChange={e => { setFirstInput( e.target.value ) }}
+                       value={firstInput} />
                 
                 <label htmlFor="selectBox"> Operation:</label>
                 <select id="selectBox" onChange={e => {setNewOption (e.target.value)}} value={newOption} htmlFor="selectBox">
@@ -68,8 +64,8 @@ const Calculator = props => {
                 <label htmlFor="secondInput">Input 2:</label>
                 <input type="text" 
                        id="secondInput"
-                       onChange={e => { setNewSecondInput( e.target.value ) }}
-                       value={newSecondInput} />
+                       onChange={e => { setSecondInput( e.target.value ) }}
+                       value={secondInput} />
 
                 <input type='submit' value="Calculate!" />
             </form>
